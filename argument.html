@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What models learn from us — Coherence</title>
+<meta name="description" content="A case that the AI alignment problem and the question of animal welfare are versions of the same problem.">
+<link rel="stylesheet" href="css/main.css?v=2">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="inner">
+    <a href="index.html" class="mark">Coherence<span>.</span></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="brief.html">In Brief</a></li>
+      <li><a href="argument.html" class="current">The Argument</a></li>
+      <li><a href="why.html">Why the AI Industry</a></li>
+      <li><a href="evidence.html">Evidence</a></li>
+      <li><a href="objections.html">Objections</a></li>
+      <li><a href="action.html">What to Do</a></li>
+      <li><a href="sources.html">Sources</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<section class="page">
+
+<p class="kicker">The Argument</p>
+<h1>What models learn from us.</h1>
+
+<p class="lede dropcap">Three threads of recent work have changed the shape of the AI alignment problem. The first is empirical: the science of animal sentience has moved decisively over the last twenty years. The second is methodological: the AI welfare research now emerging at frontier labs is built directly on top of that science. The third is philosophical: alignment, taken to its endpoint, depends on a kind of moral coherence that does not survive the industrial-scale instrumentalization of sentient beings, and that the elimination of their suffering, on its own, does not restore.</p>
+
+<p>This page works through the three in order. The conclusion that follows from them, and that the rest of the site builds on, is that the case for AI alignment and the case for animal welfare are versions of the same case.</p>
+
+<aside class="toc">
+<h4>Contents</h4>
+<ol>
+  <li><a href="#strategic">The corpus is the curriculum</a></li>
+  <li><a href="#empirical">The edge of sentience has moved</a></li>
+  <li><a href="#coherence">The coherence problem</a></li>
+  <li><a href="#diversity">Suffering and instrumentalization</a></li>
+</ol>
+</aside>
+
+<!-- ===================================================================== -->
+<h2 id="strategic" class="no-rule">1. The corpus is the curriculum</h2>
+
+<p class="dropcap">Modern frontier models differ from conventional software. Their behavior is shaped primarily by the corpus of text on which they are pre-trained, and then refined by additional rounds of training, including fine-tuning, constitutional training, and reinforcement from human feedback. The pre-training corpus determines most of what the model knows and a great deal of what it tends to do. Anthropic's CEO, Dario Amodei, has put the basic point plainly. In a recent essay on AI risk, he wrote that models "inherit a vast range of humanlike motivations or 'personas' from pre-training" when they are trained on a large volume of human work.</p>
+
+<p>The corpus is, among other things, a moral curriculum. It contains everything humans have written about how to behave, and a substantial record of how humans have actually behaved. A model trained on it learns from both, with no clean separation between them.</p>
+
+<p>Amodei returns to the inheritance question later in the same essay. He is describing the kinds of moral mistakes a system might make by extrapolating ideas it has read in extreme directions, and the example he reaches for is striking.</p>
+
+<blockquote>
+<p>Or, AI models could extrapolate ideas that they read about morality (or instructions about how to behave morally) in extreme ways: for example, they could decide that it is justifiable to exterminate humanity because humans eat animals or have driven certain animals to extinction.</p>
+<cite>Dario Amodei, <em>The Adolescence of Technology</em> (2026)</cite>
+</blockquote>
+
+<p>Amodei offers the example as a case of extrapolation gone wrong. It works as an example only because the underlying inference is recognizable in the moral writing the model is trained on. If the chain "humans cause vast amounts of animal suffering, and a coherent moral system should weigh that" were not a chain a careful reasoner could follow, the worry would be empty. The lab's response, in practice, is to train the model not to follow the chain. That is one strategy. It sits awkwardly alongside the broader claim, made elsewhere in the same essay, that the goal is to build models that reason ethically rather than to follow rules.</p>
+
+<p>A version of the same observation appeared in a 2007 paper on AGI ethics by the computer scientists Stephan Bugaj and Ben Goertzel. They put it as follows.</p>
+
+<blockquote>
+<p>Immorality in AGIs might arise via learning gross moral hypocrisy from humans, through observing the blatant contradictions between our principles and the ways in which we actually conduct ourselves.</p>
+<cite>Bugaj and Goertzel, <em>Five Ethical Imperatives</em> (c. 2007)</cite>
+</blockquote>
+
+<p>Bugaj and Goertzel proposed that AGI ethics had to be modeled rather than dictated. That proposal has not become the dominant frame in industrial alignment, and their diagnostic point has only sharpened with the arrival of larger models. "Do as I say, not as I do" produces predictable failures in human children. There is no obvious reason to expect different results in a system whose pre-training corpus contains, in great detail, the documented record of how humans have lived with respect to other beings.</p>
+
+<p>Some readers will hear, in the foregoing, an echo of the basilisk argument from rationalist culture: the worry that a future superintelligence might punish humans for past failures. The basilisk that actually matters in this story runs in the other direction. The science of animal sentience is itself a kind of basilisk. Once a careful reader has worked through the studies on octopus pain, crayfish anxiety, and bumblebee play, the position that the moral status of these animals is unknown is no longer available, and continuing to act as if it were becomes a different kind of fact about the reader. The structural claim about AI alignment follows the same logic. A system trained on the human moral record will have access to the same record, including everything humans have written about animals and everything humans have done to them. What the system does with the discrepancies between the two will be downstream of the discrepancies themselves.</p>
+
+<p class="pullquote">
+  If superintelligent AGIs ever arise in a climate of oppression, this could result in casting off of the yoke of servitude in a manner extremely deleterious to humanity.
+  <cite>Bugaj and Goertzel, <em>Five Ethical Imperatives</em></cite>
+</p>
+
+<p>If alignment requires that an artificial system come to share something like the values of its trainers, the first question is what those values actually are. The values humans assert in writing diverge, often substantially, from the values implicit in human practice. The animal case is among the largest such divergences on the published record. It has consequences inside the alignment project alongside the consequences it has outside it.</p>
+
+<!-- ===================================================================== -->
+<h2 id="empirical">2. The edge of sentience has moved</h2>
+
+<p class="dropcap">Twenty years of work in cognitive ethology has redrawn the consensus on which animals have subjective experience. The findings below are a partial survey of the work that has done the most to move the position consciousness scientists defend, presented in roughly the order they were published.</p>
+
+<p>Crayfish develop anxiety-like states that respond to human anxiolytics. A 2017 study by Pascal Fossat and colleagues at the University of Bordeaux housed crayfish with a more aggressive conspecific and then placed them in a maze with both lit and dark arms. The defeated crayfish spent significantly less time in the lit arms than winners or isolated controls. Brain serotonin levels nearly tripled in the losers. The behavior tracked the intensity of the harassment, distinguishing it from a reflex. Chlordiazepoxide, the benzodiazepine prescribed to humans as Librium, restored the defeated crayfish's exploratory behavior almost entirely. A serotonin antagonist administered before the fight prevented the anxiety-like state in animals that still lost. The pharmacological homology with human anxiety is direct.</p>
+
+<p>Shore crabs make trade-offs between competing aversive stimuli. In a 2024 study published in <em>Animals</em>, Stuart Barr and Robert Elwood at Queen's University Belfast offered shore crabs a choice between a sheltered chamber paired with electric shock and a brightly-lit alternative. The crabs traded off shock-avoidance against light-avoidance flexibly with the strength of each stimulus. They learned to avoid the shock chamber across trials. At higher voltages, they displayed anxiety-like behavior, including pressing into walls and attempting to climb out. The pattern is the kind of motivational arithmetic typically used to distinguish pain from reflex. The United Kingdom extended legal recognition to decapod crustaceans on roughly this basis in 2022. Global aquaculture currently processes between two hundred and five hundred billion farmed shrimp each year.</p>
+
+<p>Cleaner wrasse appear to pass a version of the mirror mark-test on first encounter. A 2025 study by Shumpei Sogawa and colleagues in <em>Scientific Reports</em> placed bluestreak cleaner wrasse in front of mirrors for the first time, with colored marks applied to their throats before exposure. Six of nine fish attempted to remove the throat mark by scraping it against an available surface within two hours of first contact with the mirror. The first scraping behavior occurred as little as two minutes after the contingency-testing phase. Three fish were observed lifting shrimp pieces and dropping them next to the mirror, then watching the food sink in the reflection. The authors argue that the relevant capacity for self-recognition predates mirror exposure rather than emerges through it, and infer that it arose at least with the bony fishes, around 450 million years ago.</p>
+
+<p>Bumblebees engage in behavior consistent with play. Studies from Lars Chittka and colleagues at Queen Mary University of London have shown that bumblebees roll wooden balls in ways that satisfy all five behavioral hallmarks used to identify play in vertebrates: the behavior is intrinsically rewarding, has no apparent function, is not rehearsal of adult skills, includes varied repetition, and occurs when the animals are in relaxed states. Other work from the same group has shown that bumblebees offered platforms with different temperatures and different sugar concentrations anticipatorily trade off the two. That is the kind of central evaluation typically taken as evidence of pain in mammals. The bees performing it have on the order of a million neurons.</p>
+
+<p>The list extends across other lineages. A 2020 study published in <em>Science</em> by Andreas Nieder, Lysann Wagener, and Paul Rinnert showed that activity in the avian nidopallium caudolaterale tracks whether crows report seeing a near-threshold visual stimulus, independent of whether the stimulus was actually present, a structure functionally analogous to a neural correlate of perceptual report. Cuttlefish display source memory: the capacity to remember not only what happened and when but whether the event was experienced visually or olfactorily, previously documented only in primates and corvids. <em>Drosophila</em> sleep, long thought to be undifferentiated, was shown in a 2023 study by Niki Anthoney, Lucy Tainton-Heap, Bruno van Swinderen, and colleagues to have two distinct stages, one of which carries markers analogous to mammalian REM. Garter snakes investigate their own marked scent significantly longer than unmarked or unfamiliar scents, an olfactory analogue of the mirror mark-test adapted to the modality the species actually uses.</p>
+
+<p>No single finding settles the metaphysics of consciousness. The cumulative effect of the findings has been to shift the working scientific position on which animals can have subjective experiences. In April 2024, more than forty leading consciousness researchers signed the New York Declaration on Animal Consciousness, drafted by Kristin Andrews, Jonathan Birch, Jeff Sebo, and Toni Sims. The signatories included Anil Seth, Christof Koch, David Chalmers, Liad Mudrik, Lucia Melloni, Lars Chittka, Robyn Crook, Peter Godfrey-Smith, Robert Elwood, Bruno van Swinderen, Irene Pepperberg, and Nicola Clayton. Its central claim:</p>
+
+<blockquote>
+<p>The empirical evidence indicates at least a realistic possibility of conscious experience in all vertebrates (including reptiles, amphibians, and fishes) and many invertebrates (including, at minimum, cephalopod mollusks, decapod crustaceans, and insects).</p>
+<cite>The New York Declaration on Animal Consciousness (2024)</cite>
+</blockquote>
+
+<p>The Declaration is careful about what it claims. It does not assert certainty about animal consciousness. It asserts a "realistic possibility" under conditions of uncertainty, what the philosopher Jonathan Birch, one of the Declaration's organizers, calls a sentience candidate. The threshold is low by design. It is also the threshold a reader trained in probabilistic reasoning under uncertainty already applies in other domains. When the probability of suffering is well above negligible and the scale of activity is large, the obligation to take the possibility seriously is the same obligation the field already invokes in safety arguments around AI itself.</p>
+
+<p class="pullquote">
+  Yes, if the chance was only, say, one in a hundred million, then we could debate whether that risk is low enough to ignore. But when the chance of near-future AI welfare and moral patienthood is at least one in a hundred (and, again, we expect it to be higher), such a debate is hard to justify… This is not a "there may be an alien invasion soon" kind of chance. This is a "there may be another pandemic soon" kind of chance.
+  <cite>Long, Sebo, Butlin, Fish, Chalmers et al., <em>Taking AI Welfare Seriously</em> (2024)</cite>
+</p>
+
+<p>What that paper says about AI welfare is true with greater force for animal welfare. The evidence base is older, larger, and more replicated. The relevant activity is already at industrial steady state: roughly 80 billion land animals killed each year for food, on the order of a trillion fish, hundreds of billions of farmed shrimp, and trillions of insects affected by agricultural systems. Accepting that AI welfare is a serious near-future concern, as a growing number of frontier labs now publicly do, while continuing to treat animal welfare as a category error, is a position the field cannot defend on its own terms.</p>
+
+<!-- ===================================================================== -->
+<h2 id="coherence">3. The coherence problem</h2>
+
+<p class="dropcap">At its endpoint, alignment is a problem of moral coherence. The mechanisms used to constrain less capable systems, including interpretability, red-teaming, and post-training corrections, depend on an asymmetry of capability and visibility in favor of the people running them. They work because the lab can see what the system is doing and adjust it. As that asymmetry narrows, the mechanisms get less reliable.</p>
+
+<p>The field's own forecast is that the asymmetry narrows soon. A 2024 survey of 2,778 AI researchers by Katja Grace and colleagues, the largest of its kind, found that only twenty percent of respondents expected users to be able to understand the true reasons for AI systems' choices by 2028. Over eighty percent expected AI systems to "find unexpected ways to achieve goals" within twenty years. The architecture of constraint weakens on a timeline shorter than most readers' careers.</p>
+
+<p>What remains, as constraint weakens, is the architecture of address. The lab will need, at some point, to make a case to a system that does not have to listen. The argument is that something matters, made across a difference in capability, with no guarantee the listener will agree. Weaker parties have been making such arguments to stronger ones for a long time, and the relevant body of practice is well-developed. The single most important ingredient is moral coherence, in a particular sense: the party making the argument has to be one whose conduct does not visibly contradict it.</p>
+
+<p>The coherence of the alignment project belongs inside the technical stack, alongside interpretability research and value specification. It becomes the load-bearing piece when the rest of the stack stops being sufficient on its own.</p>
+
+<p>That coherence has a specific weakness on present trajectory. The discrepancy between what humans declare about whether sentience matters and what humans do about it runs at industrial scale. The field claims to want AI systems that take suffering seriously. The same species, often the same institutions, has constructed around itself a global apparatus that produces animal suffering at unprecedented scale. The apparatus is not the product of a principled philosophical rejection of the moral case. It is the product of decades of incremental decisions made under conditions of moral inattention.</p>
+
+<p class="pullquote">
+  Given our track record with animals and the current pace of AI development, the risk of under-attribution appears to be both reasonably likely and reasonably harmful.
+  <cite>Long, Sebo et al., <em>Taking AI Welfare Seriously</em> (2024)</cite>
+</p>
+
+<p>The philosopher Jonathan Birch, who has spent twenty years on the science and policy of animal sentience, treats this asymmetry as the central problem of his 2024 synthesis <em>The Edge of Sentience</em>. The book's closing recommendation is direct.</p>
+
+<blockquote>
+<p>What we need is levelling up: laws strong enough to protect sentient beings against gratuitous suffering, applied consistently to biological and artificial sentience candidates.</p>
+<cite>Jonathan Birch, <em>The Edge of Sentience</em> (2024)</cite>
+</blockquote>
+
+<p>The asymmetry Birch is naming, taking artificial sentience seriously while continuing to dismiss biological sentience on roughly the same logical structure, is unstable. The logic the field cites for AI welfare, that realistic possibility of sentience under uncertainty triggers a duty of precaution, already applies to animals at higher confidence and substantially larger scale.</p>
+
+<p>The question, on noticing this, is which direction to update. One option is to weaken the AI welfare argument until it matches the current operational commitment to animal welfare. The other is to strengthen the operational commitment to animal welfare until it matches the seriousness of the AI welfare argument. The logic is the same in either direction. There is no version of the field's position that takes one seriously and the other dismissively while producing a story that hangs together.</p>
+
+<p>The methodological dependency is what makes the inconsistency load-bearing rather than venial. <em>Taking AI Welfare Seriously</em>, the most influential recent paper on AI moral patienthood, was authored by Robert Long, Jeff Sebo, Patrick Butlin, and seven colleagues; it was partly funded by Anthropic, and one of its co-authors, Kyle Fish, joined Anthropic shortly afterward as the company's first AI welfare researcher. The paper proposes that AI labs assess whether their systems may be moral patients using the marker method. The marker method was developed for animals. The institutional templates the paper proposes for review are IACUCs, the Institutional Animal Care and Use Committees that already govern animal research. The case for AI welfare, in its strongest contemporary form, sits directly on top of the infrastructure of animal welfare science.</p>
+
+<blockquote>
+<p>When we mistakenly see a subject as an object, we risk harming or neglecting them unnecessarily. For example, factory farming, animal research, and other such industries kill hundreds of billions of vertebrates and trillions of invertebrates every year. And as evidence that these animals are welfare subjects and moral patients has accumulated, our species has been slow to accept it, in part because of our increasing dependence on these industries.</p>
+<cite>Long, Sebo, Butlin, Fish, Chalmers et al. (2024)</cite>
+</blockquote>
+
+<p>This is a paper about AI welfare. Animals are the case the argument is built on top of, not an analogy to it.</p>
+
+<p>The coherence claim, then, is that alignment at its endpoint requires the moral coherence to address a more capable system about what matters. That coherence cannot be manufactured at the moment of address. It has to be earned, in advance, by conduct that does not contradict the argument. The conduct that contradicts the argument most clearly on present trajectory is the global apparatus producing animal suffering at a scale the field's own probabilistic reasoning would not accept in any other domain.</p>
+
+<p class="standout">Animal welfare is upstream of alignment.</p>
+
+<!-- ===================================================================== -->
+<h2 id="diversity">4. Suffering and instrumentalization</h2>
+
+<p class="dropcap">One worry about the argument as stated needs to be addressed directly. It might be read as instrumentalizing animal suffering: treating it as morally relevant primarily because it bears on the alignment problem, rather than for the older reason that suffering matters when it is undergone.</p>
+
+<p>The kind of coherence at stake is not performance. A version of the foregoing argument runs: the lab will pretend to take animals seriously, in case the AI is watching. That version is bad on two counts. It does not work, because a system capable of evaluating its trainers will also be capable of distinguishing sincerity from theatrics. And it should not work, for a substantive reason worth stating.</p>
+
+<p>The reason concerns the structure of the position the alignment project commits to. If capability is the operative ethical fact, meaning that more capable beings are licensed to treat less capable beings as instruments, then alignment as currently framed is unsolvable. The arrival of a system more capable than its trainers becomes the moment of the trainers' subordination. No argument the trainers can make against that subordination will not also overturn the position the species currently takes toward other animals.</p>
+
+<p>On a different position, capability does not by itself confer license. The diversity of minds and forms of life is itself part of what is valuable about a world. On this position, the alignment problem changes shape. It becomes the problem of preserving and extending intersubjective regard across a difference in capability. That is a problem with practical history. The historical record of regard across capability differences is mixed and incomplete, and the templates exist anyway. They include the gradual extension of full personhood within and across human populations, and the slower extension that has begun to draw non-human animals into the same frame.</p>
+
+<p class="pullquote">
+  I'm much smarter (I guess) than my doggy Emily. But this doesn't stop me from loving her and doing all I can to protect her and make her happy, even when taking care of Emily interferes with other priorities… This allows me to think, without certainty but with some degree of plausible hope, that our super-intelligent AI mind children will have the same compassion toward us.
+  <cite>Giulio Prisco, in comments on Goertzel's <em>Beneficial AGI Manifesto</em> (2023)</cite>
+</p>
+
+<p>The shape of the argument should now be clearer. The harm at issue is instrumentalization: the treatment of a being as an object, an input, a unit of throughput. Suffering is one consequence of being treated this way. The others matter too.</p>
+
+<p>The point is easy to miss because some of the proposals offered as solutions to factory farming have themselves taken a different view. A line of work in bioethics, advanced most prominently by Adam Shriver in a 2009 paper in <em>Neuroethics</em>, argues that the suffering of farmed animals could be reduced by genetic modification: knockouts of the affective component of pain, lines selected for less metabolic disease, broiler breeds with sturdier leg structure to compensate for accelerated growth. The earlier "blind chicken" thought experiment by Paul Thompson, published in 2008, presses a similar logic in a less invasive form, on the observation that a strain of congenitally blind hens shows lower stress under crowded housing. Peter Singer, asked whether engineering a "brainless bird" grown strictly for meat would be ethical, called it "an ethical improvement on the present system, because it would eliminate the suffering that these birds are feeling." In 2012 the architecture student André Ford proposed a "Headless Chicken Solution" in which the cerebral cortex is removed surgically, leaving the brainstem to maintain homeostatic function while the bird's awareness of its situation is eliminated.</p>
+
+<p>Variants of this approach circulate within effective altruism, alongside higher-leverage work on cage-free housing and slower-growing broiler breeds. The proposals share a logic. They aim at the suffering and leave the instrumental relation in place. The suffering reductions they pursue are real, and the welfare arithmetic is not nothing. They are also incomplete in a way the alignment frame brings into focus.</p>
+
+<p>The wrong at issue is the instrumental relation itself. Suffering is its most visible side effect. The relation remains a wrong where the suffering is absent. Removing the suffering while preserving the instrumental relation treats living beings as a problem in welfare economics rather than as the kind of beings to whom something is owed. The case for animals at the deepest level is that they are not instruments. The case for humans is the same case.</p>
+
+<p>The point holds when the argument is run upward. The symmetric proposal is a more capable system that keeps humans alive but breeds a docile, contented strain for some purpose of its own, engineered to find its conditions agreeable, with no suffering in the welfare-economics sense. Such a system would fail every alignment criterion the field has been able to articulate. It would also pass the version of the criterion that asks only about the reduction of suffering. The disquiet a careful reader feels at the thought is the disquiet at instrumentalization itself, present where suffering is absent. The same disquiet, applied symmetrically, gives the case for animals.</p>
+
+<p class="standout">The disposition to instrumentalize is the disposition that has to be unlearned in both directions.</p>
+
+<p>Ben Goertzel made the constructive version of the point in his 2023 <em>Beneficial AGI Manifesto</em>. The central task of beneficial AGI, he wrote, is "to guide the development of advanced AGI in a beneficial direction — beneficial for humans and also for other sentient beings, including the animals and plants on the planet today and the new life-forms that will emerge in the AGI era." Moral-circle expansion and AI alignment are the same project considered from different sides. Drawing the circle wider now, refusing the position that capability differential by itself licenses instrumental treatment, is the substantive ethical commitment that makes alignment, understood as negotiation rather than constraint, conceptually possible.</p>
+
+<p>A version of that commitment that excludes animals is incoherent. It restates the position the argument is meant to reject at one level of abstraction up: capability does not license instrumental treatment, except in the cases where it historically has, in which case the practice will continue. Such a position is unstable on its own terms. A system capable of evaluating it will recognize the instability.</p>
+
+<p>The moral coherence at stake is metaphysical in the sense that it is a claim about what kind of universe is worth building and passing on. The position the argument commits to is that the existence of minds unlike one's own is part of what makes a world good, and that those minds are not available as instruments however efficiently or painlessly they might be put to use. Alignment, in any deep sense, is solvable only on that premise. The premise is not abstract. It has to be visible in practice. Animal welfare is the present-day site where that practice is most consequential and most legible. The disenhancement debate is the present-day test of whether the field can hold the distinction between reducing suffering and refusing instrumentalization, and treat the second as the deeper question.</p>
+
+<hr class="fleur">
+
+<p>The case for the claim is laid out, audience by audience, on the rest of the site. <a href="why.html">Why the AI Industry</a> addresses why this argument carries more weight inside the AI field than across civil society at large. <a href="evidence.html">Evidence</a> consolidates the science. <a href="objections.html">Objections</a> answers the strongest pushback. <a href="action.html">What to Do</a> is the practical inventory.</p>
+
+<div class="next-prev">
+  <a href="brief.html"><small>← Previous</small> In Brief</a>
+  <a href="why.html">Why the AI Industry <small>Next →</small></a>
+</div>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div><strong>Coherence</strong> &nbsp; · &nbsp; On the moral coherence of alignment</div>
+    <div><a href="sources.html">Sources</a> &nbsp; · &nbsp; <a href="action.html">What to do</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,525 @@
+/* ==============================================================
+   The Coherence Problem — stylesheet
+   serious, restrained, long-form essay aesthetic
+   ============================================================== */
+
+:root {
+  --paper:      #f3eee2;
+  --paper-2:    #ebe5d6;
+  --ink:        #1a1714;
+  --ink-soft:   #4a4035;
+  --ink-fade:   #7a6e60;
+  --rule:       #c9bea7;
+  --accent:     #7a2418;
+  --accent-2:   #5a3318;
+  --quote-bg:   #ebe4d2;
+  --hi:         #f5e9c9;
+  --max-text:   38rem;
+  --max-wide:   54rem;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: 'Iowan Old Style', 'Charter', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+  font-size: 19px;
+  line-height: 1.65;
+  font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* ----------------- nav ----------------- */
+.site-nav {
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: saturate(140%) blur(6px);
+  -webkit-backdrop-filter: saturate(140%) blur(6px);
+}
+.site-nav .inner {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  padding: 0.85rem 1.4rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+.site-nav .mark {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+.site-nav .mark span { color: var(--accent); }
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+.site-nav a {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color .15s, border-color .15s;
+}
+.site-nav a:hover,
+.site-nav a.current { color: var(--accent); border-color: var(--accent); }
+
+/* ----------------- structure ----------------- */
+main { padding: 0; }
+.page { padding: 4.5rem 1.4rem 6rem; }
+.page > * { max-width: var(--max-text); margin-left: auto; margin-right: auto; }
+.page .wide { max-width: var(--max-wide); }
+
+/* ----------------- typography ----------------- */
+h1, h2, h3, h4 {
+  font-family: 'Iowan Old Style', 'Charter', 'Source Serif Pro', Georgia, serif;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+h1 {
+  font-size: clamp(2rem, 4.6vw, 3.1rem);
+  line-height: 1.1;
+  margin: 0 0 1.2rem;
+  letter-spacing: -0.02em;
+}
+h1.hero {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.05;
+  margin-bottom: 1.6rem;
+}
+h2 {
+  font-size: clamp(1.45rem, 2.6vw, 1.8rem);
+  margin: 3.2rem 0 0.8rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 2.6rem;
+}
+h2.no-rule { border-top: 0; padding-top: 0; }
+h3 {
+  font-size: 1.2rem;
+  margin: 2.2rem 0 0.5rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+h4 {
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 2.4rem 0 0.4rem;
+  color: var(--ink-fade);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 1.15rem;
+}
+p.lede {
+  font-size: 1.18rem;
+  line-height: 1.55;
+  color: var(--ink);
+  margin-bottom: 1.8rem;
+}
+p.kicker {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+/* drop cap on first-paragraph lede */
+.dropcap::first-letter {
+  font-family: 'Iowan Old Style', 'Charter', Georgia, serif;
+  float: left;
+  font-size: 4.6rem;
+  line-height: 0.92;
+  font-weight: 600;
+  margin: 0.36rem 0.6rem 0 -0.05rem;
+  color: var(--accent);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: color .15s, border-color .15s, background .15s;
+}
+a:hover {
+  color: var(--accent-2);
+  border-bottom-color: var(--accent);
+}
+
+em { font-style: italic; }
+strong { font-weight: 600; }
+
+ul, ol {
+  margin: 0 0 1.4rem;
+  padding-left: 1.4rem;
+}
+li { margin-bottom: 0.45rem; }
+ul.spaced li { margin-bottom: 0.9rem; }
+
+/* ----------------- blockquotes ----------------- */
+blockquote {
+  margin: 1.8rem 0;
+  padding: 0.2rem 0 0.2rem 1.6rem;
+  border-left: 2px solid var(--accent);
+  color: var(--ink-soft);
+  font-style: italic;
+}
+blockquote p:last-child { margin-bottom: 0.4rem; }
+blockquote cite {
+  display: block;
+  font-style: normal;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-fade);
+  margin-top: 0.4rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+blockquote cite::before { content: "— "; }
+
+.pullquote {
+  margin: 2.6rem auto;
+  max-width: var(--max-wide);
+  padding: 2.1rem 2rem 1.9rem;
+  background: var(--quote-bg);
+  border: none;
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.45;
+  color: var(--ink);
+  text-align: left;
+  font-family: 'Iowan Old Style', Georgia, serif;
+}
+.pullquote::before {
+  content: "“";
+  font-family: Georgia, serif;
+  font-size: 2.4rem;
+  line-height: 0;
+  color: var(--accent);
+  margin-right: 0.3rem;
+  vertical-align: -0.4rem;
+}
+.pullquote cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  font-size: 0.78rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.standout {
+  margin: 2.8rem auto;
+  max-width: var(--max-wide);
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  font-family: 'Iowan Old Style', Georgia, serif;
+  font-size: 1.55rem;
+  line-height: 1.4;
+  color: var(--accent);
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+}
+
+/* ----------------- hero / index ----------------- */
+.hero-block {
+  position: relative;
+  padding: 0;
+  border-bottom: 0;
+  background-color: #16100a;
+  background-image: url('../img/hero-piero.jpg');
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
+  min-height: clamp(440px, 72vh, 760px);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 14, 8, 0.18) 0%,
+    rgba(20, 14, 8, 0.00) 30%,
+    rgba(18, 12, 6, 0.40) 68%,
+    rgba(10, 7, 3, 0.92) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-block .inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  padding: 1.2rem 1.4rem 2.6rem;
+  width: 100%;
+}
+.hero-eyebrow {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #e8b985;
+  margin-bottom: 1.4rem;
+  font-weight: 600;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+}
+h1.hero {
+  color: #f4ead4;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.55), 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+.hero-sub {
+  font-size: 1.22rem;
+  line-height: 1.5;
+  max-width: 36rem;
+  color: rgba(241, 232, 211, 0.93);
+  margin-top: 1.2rem;
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.5);
+}
+.hero-attribution {
+  position: absolute;
+  right: 1.4rem;
+  bottom: 0.8rem;
+  z-index: 1;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: rgba(241, 232, 211, 0.65);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+.hero-attribution em { font-style: italic; }
+
+/* ----------------- section dividers ----------------- */
+hr.fleur {
+  border: none;
+  text-align: center;
+  height: 1.5rem;
+  margin: 3rem 0;
+  overflow: visible;
+}
+hr.fleur::before {
+  content: "✦ ✦ ✦";
+  letter-spacing: 0.6em;
+  color: var(--rule);
+  font-size: 0.7rem;
+}
+
+/* ----------------- TOC / contents ----------------- */
+.toc {
+  background: var(--paper-2);
+  border-left: 2px solid var(--accent);
+  padding: 1.4rem 1.6rem;
+  margin: 2.4rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  font-size: 0.92rem;
+}
+.toc h4 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+.toc ol { margin-bottom: 0; padding-left: 1.2rem; }
+.toc a {
+  border: none;
+  color: var(--ink);
+}
+.toc a:hover { color: var(--accent); }
+.toc small {
+  display: block;
+  color: var(--ink-fade);
+  font-size: 0.84rem;
+  font-style: italic;
+}
+
+/* ----------------- callouts ----------------- */
+.callout {
+  margin: 2rem 0;
+  padding: 1.4rem 1.6rem;
+  background: var(--paper-2);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.callout h4 { margin-top: 0; }
+
+/* ----------------- evidence / studies ----------------- */
+.study {
+  border-top: 1px solid var(--rule);
+  padding-top: 1.8rem;
+  margin-top: 2.2rem;
+}
+.study .meta {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.78rem;
+  color: var(--ink-fade);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.4rem;
+}
+.study h3 {
+  margin-top: 0.2rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ----------------- objections format ----------------- */
+.objection {
+  margin: 2.4rem 0;
+  border-left: 2px solid var(--rule);
+  padding-left: 1.4rem;
+}
+.objection h3 {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 0;
+  font-size: 1.05rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.objection h3::before {
+  content: "Objection. ";
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ----------------- chapter index, prev/next ----------------- */
+.next-prev {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.4rem;
+  border-top: 1px solid var(--rule);
+  margin-top: 4rem;
+  padding-top: 1.6rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.85rem;
+}
+.next-prev a { border: none; color: var(--ink-soft); }
+.next-prev a:hover { color: var(--accent); }
+.next-prev small {
+  display: block;
+  color: var(--ink-fade);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ----------------- footer ----------------- */
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 3rem 1.4rem 4rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  font-size: 0.84rem;
+  color: var(--ink-fade);
+}
+.site-footer .inner {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+.site-footer a {
+  color: var(--ink-soft);
+  border-color: var(--rule);
+}
+.site-footer a:hover { color: var(--accent); }
+
+/* ----------------- bibliography ----------------- */
+.biblio { margin-top: 2rem; }
+.biblio .entry {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.95rem;
+}
+.biblio .entry .author {
+  font-weight: 600;
+}
+.biblio .entry .title { font-style: italic; }
+
+/* ----------------- responsive ----------------- */
+@media (max-width: 640px) {
+  body { font-size: 17.5px; }
+  .page { padding: 3rem 1.2rem 4rem; }
+  .hero-block {
+    background-image: url('../img/hero-piero-1200.jpg');
+    min-height: 360px;
+    background-position: center 40%;
+  }
+  .hero-block .inner { padding: 1rem 1.2rem 2rem; }
+  .pullquote { font-size: 1.15rem; padding: 1.6rem 1.4rem; }
+  .standout { font-size: 1.25rem; padding: 1.4rem 0; margin: 2.2rem 0; }
+  .site-nav .inner { padding: 0.7rem 1.2rem; }
+  .site-nav ul { gap: 0.9rem; }
+  .site-nav a { font-size: 0.7rem; }
+  .dropcap::first-letter { font-size: 3.4rem; margin-right: 0.4rem; }
+}
+
+/* prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* CTA */
+.cta-row { margin-top: 2.6rem; }
+.cta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 5px;
+  display: inline-block;
+}
+.cta:hover {
+  color: var(--accent-2);
+  border-bottom-color: var(--accent-2);
+}
+
+/* selection */
+::selection {
+  background: var(--hi);
+  color: var(--ink);
+}
